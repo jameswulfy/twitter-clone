@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<link rel="stylesheet" href="css/styles.css" type="text/css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="js/app.js" async defer></script>
 	</head>
 	<body>
 		<div id="page-container">
@@ -14,14 +12,14 @@
 				<div id="profile-summary">
 					<div class="content">
 						<img class='avatar' src='img/alagoon.jpg' />
-						<p>Your Name Here</p>
+						<p id="active-user">Your Name Here</p>
 					</div>
 				</div>
 				<div id="tweet-content">
 
 					<!-- STEP 2: When the user clicks on the textarea, the textarea should double in size and the character count and Tweet buttons should be revealed. -->
 					<!-- HINT: jQuery ".on" eventHandler -->
-					<textarea class="tweet-compose" placeholder="Compose new Tweet..."/></textarea>
+					<textarea id="tweet" class="tweet-compose" placeholder="Compose new Tweet..."/></textarea>
 
 					<!-- STEP 1: Initially, the Tweet button and the character count button below should be hidden. -->
 					<!-- HINT: Use CSS -->
@@ -180,5 +178,10 @@
 				</div><!-- #stream -->
 			</div><!-- #main -->
 		</div><!-- #page-container -->
+	<scripts>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/app.js" async defer></script>
+	</scripts>
+
 	</body>
 </html>

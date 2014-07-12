@@ -1,12 +1,13 @@
 var toggleComposeHeight = function(){
-	var  compose = $('.tweet-content .tweet-compose');
-	if (compose.height() == 21){
-	compose.height('42px');
-	} else {
-		compose.height('21px');
-	}
-
-}
+	var  compose = $('#tweet');
+	compose.height(function(w,h){
+		if(h == 21){
+			return h*2;
+		} else{
+			return 21;
+		}
+	});
+};
 
 var countChar = function(){
 	var compose = $('#tweet-content .tweet-compose');
@@ -16,11 +17,15 @@ var countChar = function(){
 
 
 $( document ).ready(function() {
+	$("#tweet-controls").hide();
 //step one capture click in text area
 $('.tweet-compose').click(function() {
+	toggleComposeHeight();
 //step two toggle the tweet-controls
 	$('#tweet-controls').toggle();
 //step three double the textArea
 	$('.tweet-compose').height();
 })
 });
+
+$("#active-user").text("JamesWulfy");
